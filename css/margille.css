@@ -1,110 +1,140 @@
 @media all {
     * {
-        box-sizing:             border-box;
-        position:               relative;
-        margin:                 0px;
-        padding:                0px;
-        text-align:             center;
-        font-family:            'Poppins', sans-serif;
+        box-sizing:                 border-box;
+        position:                   relative;
+        margin:                     0px;
+        padding:                    0px;
+        text-align:                 center;
+        text-decoration:            none;
+        font-family:                'Poppins', sans-serif;
     }
-
     .pages {
-        clear:                  both;
-        width:                  100vw;
-        margin:                 auto;
+        clear:                      both;
+        width:                      100vw;
+        margin:                     auto;
+        background-position:        50% 50%;
+        background-size:            cover;
     }
-
-    .page-01 {
-        height:		            100vh;
-        background-position:    50% 50%;
-        background-image:       url('../img/intro.jpg');
-        background-size:		cover;
+    #page-01 {
+        height:                     100vh;
+        background-image:           url('../img/intro.jpg');
     }
-
     .socialmedia-group {
-        height:                 15%;
-        background-color:       rgba(15, 15, 15, 0.5);
+        height:                     15%;
+        background-color:           rgba(15, 15, 15, 0.5);
     }
-
     .socialmedia {
-        top:                    30%;
-        height:                 40%;
-        margin:                 auto 1.5vh;
+        top:                        30%;
+        height:                     40%;
+        margin:                     auto 1.5vh;
     }
-
     .greetings {
-        top:                    5%;
-        color:                  white;
-        text-shadow:            0.05em 0.05em 0.2em brown;
+        top:                        5%;
+        color:                      white;
+        text-shadow:                0.05em 0.05em 0.2em brown;
     }
-
     .options {
-        top:                    10%;
-        height:                 12vh;
+        top:                        10%;
+        height:                     12vh;
     }
-
     .col {
-        float:                  left;
-        clear:                  none;
-        width:                  50%;
-        height:                 100%;
-        margin:                 5% 0 0 25%;
-        background-position:    50% 50%;
-        background-image:       url('../img/italian_table_yelow.jpg');
-        background-size:        cover;
+        float:                      left;
+        clear:                      none;
+        width:                      50%;
+        height:                     100%;
+        margin:                     5% 0 0 25%;
+        background-image:           url('../img/italian_table_yelow.jpg');
     }
-
-    .col span {
-        display:                inline-block;
-        top:                    50%;
-        transform:              translate(0%, -50%);
-        font-size:              1.3em;
-        color:                  red;
-        text-shadow:            0.05em 0.05em 0.2em brown;
+    .col .opt {
+        display:                    inline-block;
+        top:                        50%;
+        transform:                  translate(0%, -50%);
+        font-size:                  1.3em;
+        color:                      red;
+        text-shadow:                0.05em 0.05em 0.2em brown;
+    }
+    .col:hover {
+        animation-name:             tremer;
+        animation-duration:         0.1s;
+        animation-iteration-count:  2;
+    }
+    #page-02 .content{
+        margin:                     10px;
+        color:                      white;
+        text-shadow:                0.1em 0.1em 0.2em black;
+        background-image:           url('../img/general_background.png');
+        background-size:            auto;
+        box-shadow:                 0 0 5px 5px rgb(250, 170, 110);
+    }
+    #who-we-are {
+        float:                      left;
+        width:                      30vw;
+        margin:                     20px;
+    }
+    #page-02 .about-area * {
+        padding:                    20px;
+        text-align:                 left;
+    }
+    .arrow-top {
+        width:                      3vw;
+    }
+    .arrow-top:hover {
+        transform:                  scale(1.1);
+        transition:                 all 0.2s ease;
     }
 }
 
 @media all and (orientation: portrait) {
-    .page-01 {
-        background-image:       url('../img/intro_portrait.jpg');
+    #page-01 {
+        background-image:           url('../img/intro_portrait.jpg');
     }
     .socialmedia-group {
-        height:                 10%;
+        height:                     10%;
     }
     .socialmedia {
-        margin:                 auto 0.5vh;
+        margin:                     auto 0.5vh;
+    }
+    #who-we-are {
+        float:                      none;
+        width:                      60vw;
     }
 }
 
 @media all and (orientation: landscape) {
     .col {
-        width:                  calc(50% / 2);
-        height:                 150%;
-        margin:                 2% 0 0 calc(50% / 3);
+        width:                      calc(50% / 2);
+        height:                     150%;
+        margin:                     2% 0 0 calc(50% / 3);
     }
 }
 
 @media all and (min-width: 768px) {
     .greetings {
-        font-size:              1.5em;
+        font-size:                  1.5em;
     }
     .col {
-        width:                  calc(50% / 2);
-        height:                 150%;
-        margin:                 5% 0 0 calc(50% / 3);
+        width:                      calc(50% / 2);
+        height:                     150%;
+        margin:                     5% 0 0 calc(50% / 3);
     }
 }
 
-
 @media all and (min-width: 1024px) {
     .greetings {
-        font-size:              1.2em;
+        font-size:                  1.2em;
     }
     .pages {
-        width:                  90vw;
+        width:                      90vw;
     }
     .col {
-        width:                  calc((100% - 7.5em) / 4);
-        margin:                 5% 0 0 1.5em;
+        width:                      calc((100% - 7.5em) / 4);
+        margin:                     5% 0 0 1.5em;
     }
+}
+
+@keyframes tremer {
+    0%
+        { transform: rotate(2deg);  }
+    100%
+        { transform: rotate(-2deg); }
 }
