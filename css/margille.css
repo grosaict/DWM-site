@@ -5,8 +5,7 @@
         margin:                     0px;
         padding:                    0px;
         text-decoration:            none;
-        /*transition-duration:        333ms;*/
-        transition:                 all 0.2s ease;
+        transition:                 all 0.5s ease;
         font-family:                'Poppins', sans-serif;
     }
     .pages {
@@ -96,7 +95,7 @@
         background-color:           rgba(255, 255, 200, 0.8);
     }
         .pizza {
-            background-size:            auto;
+            max-height:                 48px;
             margin:                     10px;
             padding:                    15px;
             color:                      white;
@@ -104,30 +103,23 @@
             background-color:           rgba(255, 0, 0, 0.8);
             box-shadow:                 0 0 15px 2px grey;
             pointer-events:             all;
+            overflow:                   hidden;
         }
         .pizza:nth-child(even) {
             background-color:           rgb(32, 140, 100);
         }
         #page-03 .pizza:hover, 
         #page-03 .pizza:active {
-            height:                     100%;
+            max-height:                 300px;
         }
-            .pizza p {
-                display:                    none;
-            }
-            #page-03 .pizza:hover p {
-                display:                    block;      /*Isso está inutilizando o transition (linhas 8 e 9) */
-            }
     #page-04 {
         padding:                    10px;
     }
         iframe {
-             width:                     600px;
-             height:                    450px;
+             width:                     40%;
              border:                    0;
         }
 }
-
 @media all and (orientation: portrait) {
     #page-01 {
         background-image:           url('../img/intro_portrait.jpg');
@@ -144,7 +136,6 @@
         margin-left:                20%;
     }
 }
-
 @media all and (orientation: landscape) {
     .col {
         width:                      calc(50% / 2);
@@ -152,7 +143,6 @@
         margin:                     2% 0 0 calc(50% / 3);
     }
 }
-
 @media all and (min-width: 768px) {
     .greetings {
         font-size:                  1.5em;
@@ -163,7 +153,6 @@
         margin:                     5% 0 0 calc(50% / 3);
     }
 }
-
 @media all and (min-width: 1024px) {
     .greetings {
         font-size:                  1.2em;
@@ -176,7 +165,6 @@
         margin:                     5% 0 0 1.5em;
     }
 }
-
 @keyframes tremer {
     0%
         { transform: rotate(2deg);  }
