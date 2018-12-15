@@ -15,9 +15,13 @@
         background-position:        50% 50%;
         background-size:            cover;
     }
+    hr {
+        width:                      100%;
+        border-color:               transparent;
+    }
     .arrow-top {
-        margin-left:                48.5%;
-        width:                      3%;
+        margin-left:                47%;
+        width:                      6%;
     }
     .arrow-top:hover {
         transform:                  scale(1.1);
@@ -47,7 +51,7 @@
             color:                      white;
             text-shadow:                0.05em 0.05em 0.2em brown;
         }
-        .options {
+        .options nav {
             top:                        10%;
             height:                     12vh;
         }
@@ -57,6 +61,7 @@
                 width:                      50%;
                 height:                     100%;
                 margin:                     5% 0 0 25%;
+                list-style-type:            none;
             }
             .col .opt {
                 display:                    inline-block;
@@ -71,7 +76,11 @@
                 animation-duration:         0.1s;
                 animation-iteration-count:  2;
             }
-    #page-02 .content{
+    #page-02 .content,
+    #store-hours,
+    #contact,
+    #page-05 .content {
+        width:                      calc(100% - 20px);
         margin:                     10px;
         font-size:                  1.2em;
         color:                      rgb(32, 140, 100);
@@ -112,12 +121,25 @@
         #page-03 .pizza:active {
             max-height:                 300px;
         }
-    #page-04 {
-        padding:                    10px;
-    }
-        iframe {
-             width:                     40%;
-             border:                    0;
+        iframe,
+        #store-hours {
+            float:                      left;
+            padding:                    10px;
+            width:                      calc(40% - 20px);
+            min-height:                 300px;
+            border:                     0;
+        }
+        #store-hours {
+            width:                      calc(60% - 20px);
+        }
+            .sp-bolt {
+                font-weight:                bold;
+            }
+            .sp-tab {
+                margin-left:                10px;
+            }
+        #contact span {
+            padding:                        10px;
         }
 }
 @media all and (orientation: portrait) {
@@ -135,6 +157,12 @@
         width:                      60%;
         margin-left:                20%;
     }
+    iframe {
+        width:                      100%;
+    }
+    #store-hours {
+        width:                      calc(100% - 20px);
+    }
 }
 @media all and (orientation: landscape) {
     .col {
@@ -144,25 +172,34 @@
     }
 }
 @media all and (min-width: 768px) {
-    .greetings {
-        font-size:                  1.5em;
-    }
     .col {
         width:                      calc(50% / 2);
         height:                     150%;
         margin:                     5% 0 0 calc(50% / 3);
+        font-size:                  1.3em;
+    }
+    .arrow-top {
+        margin-left:                48.5%;
+        width:                      3%;
     }
 }
 @media all and (min-width: 1024px) {
     .greetings {
-        font-size:                  1.2em;
+        font-size:                  1.5em;
     }
     .pages {
         width:                      90vw;
     }
     .col {
         width:                      calc((100% - 7.5em) / 4);
+        height:                     450%;
         margin:                     5% 0 0 1.5em;
+    }
+    @media all and (orientation: portrait) {
+        .col {
+            width:                      calc((100% - 4.5em) / 2);
+            height:                     250%;
+        }
     }
 }
 @keyframes tremer {
